@@ -1,0 +1,10 @@
+Est-ce toujours pertinent aujourd'hui d'apprendre le langage C dans une
+universite? Je crois que oui. Franchement, il est peu probable que la plupart
+des etudiants aient une experience professionnelle concrete et significative
+en langage C une fois gradues. Par contre, le C est la base de tous les
+langages modernes. La gestion de la memoire, la gestion des erreurs systemes
+et les pointeurs sont des fondements qu'on retrouve dans toute une gamme de
+langages de programmation. Ce sont des notions portables dans plusieurs
+contextes et avec plusieurs technologies. Egalement, c'est toujours bon de
+savoir comment ca fonctionne en-dessous. Apres tout, nous sommes des
+informaticiens et informaticiennes, pas juste des utilisateurs d'ordinateurs.
