@@ -11,8 +11,7 @@ int findBiggestValue(int tableauOccurence[])
     int i = 0;
     int position = 0;
     while (i < SIZE_ALPHABET)
-        {
-            
+        { 
             if (tableauOccurence[i] > maxOccurence)
             {
                 maxOccurence = tableauOccurence[i];
@@ -64,29 +63,28 @@ void reecrireFichier(FILE* fichierEntree, FILE* fichierSortie, int keyValue)
 void lireFichier(FILE* fichierEntree, int tableauOccurence[])
 {
     char carac;
-    int index = -1;
-
+    int index;
 
     carac = fgetc(fichierEntree);
     while(!feof(fichierEntree)) 
     {
-        
         printf("%c", carac); 
         if (carac >= 'a' && carac <= 'z')
         {
             index = carac - 'a';
             tableauOccurence[index]++;
-            printf(": la somme est de %d", tableauOccurence[index]);
+            printf(": le compte est maintenant de %d", tableauOccurence[index]);
         } 
         else if (carac >= 'A' && carac <= 'Z')
         { 
             index = carac - 'A';
             tableauOccurence[index]++;
-            printf(": la somme est de %d", tableauOccurence[index]);
+            printf(": le compte est maintenant de %d", tableauOccurence[index]);
         }
          printf("\n"); 
         carac = fgetc(fichierEntree);
     } 
+    rewind(fichierEntree);//reinitialise le curseur et les flags
 }
 
 
@@ -95,9 +93,10 @@ int main(int argc, char** argv)
     const char TAB_ALPHA_MIN[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     FILE* fichierEntree = NULL;
     FILE* fichierSortie = NULL;
-    int position= -1;
+    int position;
     int keyValue;
     int tableauOccurence[26] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
     if (argc != 3)
     {
         printf("Vous devez saisir un fichier d'entree et un fichier de sortie\n");
@@ -112,18 +111,15 @@ int main(int argc, char** argv)
         }
         else
         {
-            fputs("dechiffrement par analyse frequentiel\n", stdout); 
-        	lireFichier(fichierEntree, tableauOccurence); 
-            rewind(fichierEntree);//reinitialise le curseur et les flags 
+        	lireFichier(fichierEntree, tableauOccurence);  
             position = findBiggestValue(tableauOccurence);
-            printf("la valeur de position est de %d\n", position);
             keyValue = TAB_ALPHA_MIN[position] - 'e';
-            printf("la valeur de key Value est de : %d\n", keyValue);
+            printf("la cle d'encryptage est de : %d\n", keyValue);
             reecrireFichier(fichierEntree, fichierSortie, keyValue);
         	fclose(fichierEntree);
         	fclose(fichierSortie);
         	printf("Decryptage termine\n");	
         }
     }
-    return 0;
+    return EXIT_SUCCESS;
 }
