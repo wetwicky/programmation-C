@@ -1,26 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#define SIZE_ALPHABET 26
-
+#include "proto.h"
 
 int findBiggestValue(int tableauOccurence[])
 {
-    int maxOccurence = -1;
-    int i = 0;
-    int position = 0;
-    while (i < SIZE_ALPHABET)
-        { 
-            if (tableauOccurence[i] > maxOccurence)
-            {
-                maxOccurence = tableauOccurence[i];
-                position = i;
-            }
-            i++;
+    int maxOccurence = -1, i = 0, position = 0;
+    while (i < 26)
+    { 
+        if (tableauOccurence[i] > maxOccurence)
+        {
+            maxOccurence = tableauOccurence[i];
+            position = i;
         }
-        printf("le caractere qui revient le plus souvent est: %c avec %d occurences\n", (position + 65), maxOccurence);
-        return position;
+        i++;
+    }
+    printf("le caractere qui revient le plus souvent est: %c avec %d occurences\n", (position + 65), maxOccurence);
+    return position;
 }
 
 int mod (int a, int b)
@@ -33,14 +29,12 @@ int mod (int a, int b)
 
 void reecrireFichier(FILE* fichierEntree, FILE* fichierSortie, int keyValue) 
 {
-    char carac;
-    char toInsert;
+    char carac, toInsert;
     int valueToModulo;
 
     carac = fgetc(fichierEntree); 
     while(!feof(fichierEntree)) 
     {
-           
         if (carac >= 'a' && carac <= 'z')
         {
             valueToModulo = (carac - 97) - keyValue;
@@ -93,13 +87,12 @@ int main(int argc, char** argv)
     const char TAB_ALPHA_MIN[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     FILE* fichierEntree = NULL;
     FILE* fichierSortie = NULL;
-    int position;
-    int keyValue;
+    int position, keyValue;
     int tableauOccurence[26] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     if (argc != 3)
     {
-        printf("Vous devez saisir un fichier d'entree et un fichier de sortie\n");
+        fputs("Vous devez saisir un fichier d'entree et un fichier de sortie\n", stderr);
     }
     else
     {
@@ -118,7 +111,7 @@ int main(int argc, char** argv)
             reecrireFichier(fichierEntree, fichierSortie, keyValue);
         	fclose(fichierEntree);
         	fclose(fichierSortie);
-        	printf("Decryptage termine\n");	
+        	fputs("Decryptage termine\n", stdout);	
         }
     }
     return EXIT_SUCCESS;
