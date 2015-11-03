@@ -22,7 +22,7 @@ pour utiliser le fichier executable, vous devez avoir  1 fichier crypté. Si tel
 alors vous devez prefixer `./` au nom du fichier et ajouter le nom du fichier d'entrée et
 le nom du fichier de sortie.
 ```c
-./a.out OU ./<nom du fichier>
+./a.out          OU          ./<nom du fichier>
 ```
 *ce qui donne avec les deux parametres:*
 
