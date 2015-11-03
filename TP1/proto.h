@@ -1,5 +1,5 @@
-#ifndef PROTO.H
-#define PROTO.H 
+#ifndef PROTO_H
+#define PROTO_H 
 
 int findBiggestValue(int tableauOccurence[]);
 

@@ -45,7 +45,7 @@ void lireFichier(FILE* fichierEntree, int tableauOccurence[]);
  * validationNombreDeParametre: prend en parametre argc afin de verifier si le nombre 
  * de parametre est valide.
  */
-void validationNombreDeParametre(int nombreDeParametre);
+void validationNombreDeParametre(int nombreDeParametre, char* fichierExecution);
 
 /*
  * ouvertureFichier: prend en parametre le chemin du fichier et le mode d'accès afin 
