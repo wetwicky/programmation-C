@@ -1,1 +1,0 @@
-When the sizeof operator is applied to an object of type char, it yields 1. When the sizeof operator is applied to an array, it yields the total number of bytes in that array, not the size of the pointer represented by the array identifier. To obtain the size of the pointer represented by the array identifier, pass it as a parameter to a function that uses sizeof. For example

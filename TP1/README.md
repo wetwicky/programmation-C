@@ -11,8 +11,9 @@ INF3135 de Jacques Bergers pour la session d'automne 2015.
 ##etape 1
 -------
 pour compiler, vous devez saisir la ligne suivante, cela vous donnera un executable
-ex:gcc -Wall cesar.c
-
+```c
+gcc -Wall cesar.c
+```
 *Vous pouvez rajouter l'option `-o <nom du fichier>` si vous souhaiter renommer l'executable 
 
 ##etape 2
@@ -20,13 +21,14 @@ ex:gcc -Wall cesar.c
 pour utiliser le fichier executable, vous devez avoir  1 fichier crypté. Si tel est le cas,
 alors vous devez prefixer `./` au nom du fichier et ajouter le nom du fichier d'entrée et
 le nom du fichier de sortie.
-
-ex:./a.out OU ./<nom du fichier>
-
+```c
+./a.out          OU          ./<nom du fichier>
+```
 *ce qui donne avec les deux parametres:*
 
-ex:./a.out fichierEntree.txt fichierSortie.txt
-
+```c
+./a.out fichierEntree.txt fichierSortie.txt
+```
 ##etape 3
 -------
 en appuyant sur `Enter` vous venez d'executer le fichier avec les deux parametres nécessaire.
