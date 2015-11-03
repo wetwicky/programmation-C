@@ -18,8 +18,8 @@ gcc -Wall cesar.c
 
 ##etape 2
 -------
-pour utiliser le fichier executable, vous devez avoir  1 fichier crypté. Si tel est le cas,
-alors vous devez prefixer `./` au nom du fichier et ajouter le nom du fichier d'entrée et
+pour utiliser le fichier executable, vous devez avoir  1 fichier cryptÃ©. Si tel est le cas,
+alors vous devez prefixer `./` au nom du fichier et ajouter le nom du fichier d'entrÃ©e et
 le nom du fichier de sortie.
 ```c
 ./a.out          OU          ./<nom du fichier>
@@ -31,8 +31,8 @@ le nom du fichier de sortie.
 ```
 ##etape 3
 -------
-en appuyant sur `Enter` vous venez d'executer le fichier avec les deux parametres nécessaire.
-Vous pouvez ensuite ouvrir le fichierSortie qui a été créé (ou écraser s'il existait déja)
-et admirer le texte décrypter a partir de fichierSorite.
+en appuyant sur `Enter` vous venez d'executer le fichier avec les deux parametres nÃ©cessaire.
+Vous pouvez ensuite ouvrir le fichierSortie qui a Ã©tÃ© crÃ©Ã© (ou Ã©craser s'il existait dÃ©ja)
+et admirer le texte dÃ©crypter a partir de fichierSorite.
 
 
