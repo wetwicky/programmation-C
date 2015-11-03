@@ -35,6 +35,6 @@ en appuyant sur `Enter` vous venez d'executer le fichier avec les deux parametre
 Vous pouvez ensuite ouvrir le fichierSortie qui a été créé (ou écraser s'il existait déja)
 et admirer le texte décrypter a partir de fichierSorite.
 
-*ATTENTION: si vous utiliser bloc-notes pour visualiser les resultats, il est possible que les saut de ligne ne s'affiche pas correctement. Pour éviter cela, ouvez le fichier avec un autre editeur de texte.*
+*ATTENTION: si vous utiliser bloc-notes pour visualiser les resultats, il est possible que les saut de ligne ne s'affiche pas correctement. Pour éviter cela, ouvrez le fichier avec un autre editeur de texte.*
 
 
